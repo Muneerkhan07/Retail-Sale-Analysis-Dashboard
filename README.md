@@ -152,11 +152,11 @@ VAR Den =
     )
 RETURN
 ROUND(DIVIDE(Num, Den), 2)
+
+
 ## 📸 Dashboard Preview
 
-Here’s a snapshot of the **Retail Sales Performance Dashboard** created in Power BI:![Sales Dashboard ](https://github.com/user-attachments/assets/fb7a4ef0-436b-45b7-99f9-231f3ab82d90)
+**Retail Sales Performance Dashboard**:![Sales Dashboard ](https://github.com/user-attachments/assets/fb7a4ef0-436b-45b7-99f9-231f3ab82d90)
 
-
-![Retail Sales Dashboard]()
 
 
