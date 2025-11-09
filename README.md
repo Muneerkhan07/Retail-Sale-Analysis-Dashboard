@@ -26,6 +26,17 @@ To analyze retail sales data and uncover insights on business performance, profi
 | **CSV (Retail_Sales.csv)** | Raw data source |
 
 ---
+## 📊 Dashboard KPIs
+
+| Metric | Description | Value |
+|--------|--------------|-------|
+| 💰 **Total Sales** | Overall revenue generated | **₹124.5M** |
+| 📈 **Total Profit** | Net profit earned after cost | **₹18.6M** |
+| 💹 **Avg Profit Margin %** | Ratio of profit to total sales | **14.9%** |
+| 🔗 **Sales–Profit Correlation** | Indicates strength of relationship | **0.86 (Strong Positive)** |
+
+
+---
 
 ## 🧩 Project Workflow
 
@@ -53,6 +64,7 @@ df['Profit_Percentage'] = (df['Profit'] / df['Sales']) * 100
 # Load to SQL
 engine = create_engine('sqlite:///retail_sales.db')
 df.to_sql('sales_data', con=engine, if_exists='replace', index=False)
+---
 ### 🔹 Step 2: SQL Analysis (SQL)
 -Performed SQL queries on SQLite database to generate summarized data views.
 #SQL Query
@@ -79,6 +91,7 @@ FROM sales_data
 GROUP BY Customer_Name
 ORDER BY Total_Sales DESC 
 LIMIT 5;
+---
 ### 🔹 Step 3: DAX Functions Used (Power Bi)
 -Connected Power BI to the SQL database (retail_sales.db)
 and built an interactive dashboard for analysis.
@@ -137,3 +150,11 @@ VAR Den =
     )
 RETURN
 ROUND(DIVIDE(Num, Den), 2)
+---
+## 📸 Dashboard Preview
+
+Here’s a snapshot of the **Retail Sales Performance Dashboard** created in Power BI:
+
+![Retail Sales Dashboard](Retail_Sales_Dashboard_Screenshot.png)
+
+---
