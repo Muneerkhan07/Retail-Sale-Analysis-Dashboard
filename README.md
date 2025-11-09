@@ -49,7 +49,8 @@ To analyze retail sales data and uncover insights on business performance, profi
 - Connected Python to SQL database via SQLAlchemy
 - Exported cleaned data into `retail_sales.db`
 
-```python
+
+python
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -64,7 +65,7 @@ df['Profit_Percentage'] = (df['Profit'] / df['Sales']) * 100
 # Load to SQL
 engine = create_engine('sqlite:///retail_sales.db')
 df.to_sql('sales_data', con=engine, if_exists='replace', index=False)
----
+
 ### 🔹 Step 2: SQL Analysis (SQL)
 -Performed SQL queries on SQLite database to generate summarized data views.
 #SQL Query
@@ -150,11 +151,4 @@ VAR Den =
     )
 RETURN
 ROUND(DIVIDE(Num, Den), 2)
----
-## 📸 Dashboard Preview
 
-Here’s a snapshot of the **Retail Sales Performance Dashboard** created in Power BI:
-
-![Retail Sales Dashboard](Retail_Sales_Dashboard_Screenshot.png)
-
----
